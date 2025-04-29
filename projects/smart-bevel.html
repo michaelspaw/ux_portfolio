@@ -3,98 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smart Bevel - Advanced non-destructive beveling tool for 3D modeling">
     <title>Smart Bevel | Michael Spaw</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__logo">MS</div>
             <ul class="nav__links">
-                <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="project__main">
-        <section class="project__hero">
-            <h1>Smart Bevel</h1>
-            <p class="project__subtitle">Advanced non destructive Beveling of edges for polygonal geometry</p>
+    <main class="project-detail">
+        <section class="project-hero">
+            <div class="project-hero__image" style="background-image: url('../assets/Smart Bevel 02.png');">
+                <div class="project-hero__content">
+                    <h1>Smart Bevel</h1>
+                    <p class="project-hero__subtitle">Advanced non-destructive beveling of edges for polygonal geometry</p>
+                </div>
+            </div>
         </section>
 
-        <section class="project__details">
-            <div class="project__content">
-                <div class="project__meta">
-                    <div class="project__meta-item">
-                        <h3>Role</h3>
-                        <p>Functionality advocate and Senior UX Designer</p>
-                    </div>
-                    <div class="project__meta-item">
-                        <h3>Timeline</h3>
-                        <p>2024 - 2025</p>
-                    </div>
-                    <div class="project__meta-item">
-                        <h3>Tools</h3>
-                        <p>3dsMax, Maya, Photoshop, Figma</p>
-                    </div>
+        <section class="project-info">
+            <div class="project-info__grid">
+                <div class="project-info__item">
+                    <h3>Role</h3>
+                    <p>Functionality advocate and Senior UX Designer</p>
                 </div>
+                <div class="project-info__item">
+                    <h3>Timeline</h3>
+                    <p>2024 - 2025</p>
+                </div>
+                <div class="project-info__item">
+                    <h3>Tools</h3>
+                    <p>3dsMax, Maya, Photoshop, Figma</p>
+                </div>
+            </div>
+        </section>
 
-                <h2>Overview</h2>
-                <p>Smart Bevel addresses long standing issues with traditional modeling approaches to "relieving edges" or creating chamfers and bevels for polygonal modeling. This tool has been designed to be integrated into both 3dsMax and Maya as a replacement for legacy functionality.</p>
+        <section class="project-section">
+            <h2>Overview</h2>
+            <div class="project-section__content">
+                <p>Smart Bevel addresses long-standing issues with traditional modeling approaches to "relieving edges" or creating chamfers and bevels for polygonal modeling. This tool has been designed to be integrated into both 3dsMax and Maya as a replacement for legacy functionality.</p>
+            </div>
+        </section>
 
-                <h2>The Ask</h2>
-                <p>As a Modeler, I want to create an arbitrarily large Bevel with no limitations and no post cleanup</p>
+        <section class="project-section">
+            <h2>The Ask</h2>
+            <div class="project-section__content">
+                <p>As a Modeler, I want to create an arbitrarily large Bevel with no limitations and no post cleanup.</p>
+            </div>
+        </section>
 
-                <h2>The Problem</h2>
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <div class="project-section__content">
                 <h3>Creativity vs Constraints</h3>
                 <ul>
                     <li>Current tools can't easily produce the forms artists want to create</li>
                     <li>Geometrical constraints set hard limits</li>
-                    <li>Time consuming manual cleanup forces hard decisions</li>
+                    <li>Time-consuming manual cleanup forces hard decisions</li>
                     <li>Artists turn to other tools to realize their vision</li>
                 </ul>
-                <img src="../images/smart-bevel-02.png" alt="Current tool limitations" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 02.png" alt="Current tool limitations">
+                    </div>
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 03.png.gif" alt="Bevel failure example">
+                    </div>
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 03.png.gif" alt="Geometrical constraints example">
+                    </div>
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 04.png" alt="Complex geometry example">
+                    </div>
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 05.png" alt="Manual cleanup example">
+                    </div>
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 06.png" alt="Alternative tools">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <h3>Current Tools Limitations</h3>
-                <p>Arbitrarily large filleted/chamfered transitions between features</p>
-                <img src="../images/bevel-fail-01.gif" alt="Bevel failure example" class="project__image">
-
-                <h3>Geometrical Constraints</h3>
-                <p>An example of the current behavior in Max</p>
-                <ul>
-                    <li>Hard limits due to existing edges</li>
-                    <li>Fails with the simplest of cases</li>
-                    <li>More complex geometry can make the situation a real rat's nest</li>
-                </ul>
-                <img src="../images/bevel-fail-02.gif" alt="Geometrical constraints example" class="project__image">
-                <img src="../images/smart-bevel-04.png" alt="Complex geometry example" class="project__image">
-
-                <h3>Manual Cleanup Challenges</h3>
-                <ul>
-                    <li>The artist either needs to limit the size of the chamfer or</li>
-                    <li>Geometry needs to be designed to accommodate such features</li>
-                    <li>Last resort: Manual cleanup</li>
-                </ul>
-                <img src="../images/smart-bevel-05.png" alt="Manual cleanup process" class="project__image">
-
-                <h3>Alternative Solutions</h3>
-                <p>Artists turn to other tools to realize their vision such as traditional Cad applications:</p>
-                <ul>
-                    <li>Fusion 360</li>
-                    <li>SolidWorks</li>
-                    <li>Moi</li>
-                    <li>Plasticity</li>
-                </ul>
-                <img src="../images/smart-bevel-06.png" alt="Alternative CAD applications" class="project__image">
-
-                <h2>Competitive Analysis</h2>
+        <section class="project-section">
+            <h2>Competitive Analysis</h2>
+            <div class="project-section__content">
+                <h3>Existing Alternatives</h3>
                 <ul>
                     <li>Modo Mesh Fusion</li>
                     <li>Blender MeshMachine Offset cut</li>
@@ -102,9 +109,14 @@
                     <li>Maya/Max Hard Mesh</li>
                     <li>Max Smooth Boolean</li>
                 </ul>
-                <img src="../images/smart-bevel-07.png" alt="Competitive analysis" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 07.png.jpg" alt="Competitive alternatives">
+                    </div>
+                </div>
 
-                <h3>Why Existing Solutions Fall Short</h3>
+                <h3>Why These Options Aren't Widely Used</h3>
                 <ul>
                     <li>They only do part of the ask</li>
                     <li>Not interactive</li>
@@ -112,10 +124,19 @@
                     <li>Reliability varies</li>
                     <li>Not Native</li>
                 </ul>
-                <img src="../images/smart-bevel-08.png" alt="Solution limitations" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 08.png.jpg" alt="Limitations of existing tools">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <h2>The Work</h2>
-                <h3>How can we do better?</h3>
+        <section class="project-section">
+            <h2>The Solution</h2>
+            <div class="project-section__content">
+                <h3>How Can We Do Better?</h3>
                 <ul>
                     <li>Built in</li>
                     <li>Works with our existing tech</li>
@@ -124,47 +145,60 @@
                     <li>More reliable</li>
                     <li>Consistent experience across DCCs</li>
                 </ul>
-                <img src="../images/smart-bevel-09.gif" alt="Improved workflow" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 09.png.gif" alt="Solution demonstration">
+                    </div>
+                </div>
 
-                <h3>What do we need to build?</h3>
+                <h3>What We Need to Build</h3>
                 <ul>
                     <li>Consistently reliable results even with complex edges</li>
                     <li>Quick application, modification, and interactive evaluation</li>
                     <li>A replacement for Bevel/Chamfer</li>
                     <li>Convergence on Nomenclature and UX</li>
-                    <li>Future Development</li>
                 </ul>
-                <img src="../images/smart-bevel-10.png" alt="Development requirements" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 10.png" alt="Development roadmap">
+                    </div>
+                </div>
 
-                <h3>Bevel/Chamfer Replacement</h3>
+                <h3>Implementation Details</h3>
+                <p>CutBack tech should replace the existing features for both Maya and Max:</p>
                 <ul>
-                    <li>CutBack tech should replace the existing features for both Maya and Max</li>
                     <li>Maya Bevel Tool</li>
                     <li>Max Chamfer Modifier</li>
                 </ul>
-                <img src="../images/smart-bevel-11.png" alt="Tool replacement strategy" class="project__image">
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 11.png" alt="Implementation details">
+                    </div>
+                </div>
 
-                <h3>UX Convergence</h3>
+                <h3>Future Development</h3>
                 <ul>
-                    <li>Consistent parameterization and behavior</li>
-                    <li>Most common functionality</li>
-                    <li>Familiar</li>
-                    <li>Quick application, hotkeys, marking menu, quad menu</li>
-                </ul>
-
-                <h2>Current Development Progress</h2>
-                <img src="../images/smart-bevel-12.png" alt="Current development status" class="project__image">
-
-                <h2>Looking Towards the Future</h2>
-                <ul>
-                    <li>Users want to directly add chamfers/bevels along the intersection curve of a Boolean Operation</li>
+                    <li>Direct chamfers/bevels along Boolean intersection curves</li>
                     <li>Variable width radius</li>
                     <li>Custom curve-based profiles</li>
-                    <li>Other applications: bridge, inset, Beveled text</li>
+                    <li>Other applications: bridge, inset, beveled text</li>
                 </ul>
+                
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 12.png" alt="Future development">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Michael Spaw. All rights reserved.</p>
+    </footer>
 
     <script src="../script.js"></script>
 </body>
