@@ -535,4 +535,21 @@ body {
     .project-section__content p {
         font-size: 1.1rem;
     }
+}
+
+.customer-quote {
+    margin: 2rem 0;
+}
+
+.customer-quote .quote-text {
+    color: #ff0000;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.customer-quote hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0.5rem 0;
 } 

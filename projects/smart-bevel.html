@@ -53,46 +53,83 @@
         <section class="project-section">
             <h2>Overview</h2>
             <div class="project-section__content">
-                <p>Smart Bevel addresses long-standing issues with traditional modeling approaches to "relieving edges" or creating chamfers and bevels for polygonal modeling. This tool has been designed to be integrated into both 3dsMax and Maya as a replacement for legacy functionality.</p>
+                <p>Our goal for Smart Bevel was to reimagine how artists create bevels and smooth transitions in hard surface modeling. The problem has been around for years—legacy tools in Maya and 3ds Max just weren't built for the flexibility and precision modern workflows demand. But we weren't simply fixing an old problem. We set out to build something that felt native, powerful, and effortless—no workarounds, no cleanup.</p>
+                
+                <p>Our high-level goals were to:</p>
+                <ul>
+                    <li>Remove the traditional limits on bevel size and complexity.</li>
+                    <li>Deliver clean, production-ready results with no need for manual fixes.</li>
+                    <li>Seamlessly integrate into existing 3ds Max and Maya workflows.</li>
+                </ul>
             </div>
         </section>
 
         <section class="project-section">
-            <h2>The Ask</h2>
+            <h2>Understanding the Problem</h2>
             <div class="project-section__content">
-                <p>As a Modeler, I want to create an arbitrarily large Bevel with no limitations and no post cleanup.</p>
-            </div>
-        </section>
+                <p>Before jumping into solutions, we spent time digging into how artists actually use bevel tools day-to-day. Through conversations with modelers across film, games, and design, a few consistent pain points surfaced—things that slowed them down, broke their flow, or required tedious cleanup after the fact. These insights helped ground our approach and ensured we were solving real, everyday problems.</p>
+                
+                <div style="margin-bottom: 2rem;"></div>
 
-        <section class="project-section">
-            <h2>The Problem</h2>
-            <div class="project-section__content">
                 <h3>Creativity vs Constraints</h3>
                 <ul>
-                    <li>Current tools can't easily produce the forms artists want to create</li>
-                    <li>Geometrical constraints set hard limits</li>
-                    <li>Time-consuming manual cleanup forces hard decisions</li>
-                    <li>Artists turn to other tools to realize their vision</li>
+                    <li>Polygonal modelers often want to create forms representative of those found in the real world. These forms often have a combination of hard or organic surfaces with Bevels, filets or chamfers to soften the edges or blend the various forms. They are ubiquitous, and visible in everything from automotive bodies to kitchen appliances. And they would like to easily create whatever forms come to mind without being limited by the tools.</li>
                 </ul>
-                
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Current tools can't easily produce the forms artists want to create</h3>
+                <ul>
+                    <li>Polygon modeling excels at creating the hard surface and organic forms but the challenge is in creating the transitions between distinct surfaces.</li>
+                    <li>Modelers can either explicitly create these bevel regions manually or use procedural tools to create the needed geometry to create the bevel intersection. But both of these approaches have shortcomings.</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Arbitrarily large filleted/chamfered transitions between features</h3>
+                <ul>
+                    <li>Modelers want to be able to create the forms they envision and explore possibilities with the design.</li>
+                </ul>
+
                 <div class="project-gallery">
                     <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 02.png" alt="Current tool limitations">
+                        <img src="../assets/Bevel fail 01.gif" alt="Bevel failure example">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>Here is an example of where 3dsMax's traditional tool for adding a chamfer to an edge between two surfaces fails once the size becomes larger than the existing geometry allows for. Note the odd black shading once the feature crosses the existing edges.</em></p>
                     </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Geometrical constraints set hard limits</h3>
+                <ul>
+                    <li>Depending on the geometry the chamfer or bevel is being applied to it can fail in even the simplest of cases. The modeler has a choice of either creating a bevel that can work within the limitations of the existing mesh, or remodel it to accommodate a larger Bevel. Sometimes even with very small bevels errors still occur leaving the modeler few choices.</li>
+                </ul>
+
+                <div class="project-gallery">
                     <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 03.png.gif" alt="Bevel failure example">
+                        <img src="../assets/Bevel fail 02.gif" alt="Complex bevel failure example">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>With a slightly more complex example the issues are even more apparent. Here a boolean is performed where the sphere geometry is subtracted from the box and the modeler would then like to bevel all the edges. Almost immediately the tool causes errors seen as the spiky extrusions from the beveled edges.</em></p>
                     </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Time consuming manual cleanup forces hard decisions</h3>
+                <ul>
+                    <li>Sometimes the modeler has to face the fact that they can't get the form they want with the existing procedural tools and they need to remodel it manually or they can get a partial solution with errors they will have to clean up.</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Artists turn to other tools to realize their vision such as traditional cad applications. These are not traditional competitive models, but it's worth reviewing how they can fill a gap</h3>
+                <ul>
+                    <li>Polygonal modeling applications like 3dsMax and Maya have these limitations but more recent cad applications such as Fusion 360, SolidWorks or Plasticity excel at creating these types of features. Cad applications use a very different approach to geometry under the hood than Polygonal modelers. But cad modeling has its own challenges and limitations so they are not a perfect replacement. Instead modelers sometime use these tool an then have to export the results back into their traditional tool and deal with the challenges cad geometry can create.</li>
+                </ul>
+
+                <div class="project-gallery">
                     <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 03.png.gif" alt="Geometrical constraints example">
-                    </div>
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 04.png" alt="Complex geometry example">
-                    </div>
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 05.png" alt="Manual cleanup example">
-                    </div>
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 06.png" alt="Alternative tools">
+                        <img src="../assets/Smart Bevel 05.png" alt="CAD application example">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>Fusion 360 and other cad applications using b-rep or hybrid solid modeling can create these forms but often with the challenges of being not easy to use, too technical, not artist friendly and the exported geometry often has to be reworked.</em></p>
                     </div>
                 </div>
             </div>
@@ -101,97 +138,203 @@
         <section class="project-section">
             <h2>Competitive Analysis</h2>
             <div class="project-section__content">
-                <h3>Existing Alternatives</h3>
-                <ul>
-                    <li>Modo Mesh Fusion</li>
-                    <li>Blender MeshMachine Offset cut</li>
-                    <li>Blender Bevel after Boolean</li>
-                    <li>Maya/Max Hard Mesh</li>
-                    <li>Max Smooth Boolean</li>
-                </ul>
+                <h3>Are there competitive alternatives?</h3>
+                <p>The answer is yes and no… Simply put there is no current solution in either another modeling application or 3rd party plugin that addresses all of the aforementioned issues.</p>
                 
+                <p>There are tools that either address some of the problem such as <strong>Modo's mesh Fusion</strong> but have strict requirements for the input geometry or <strong>Blender's Offset Cut</strong> which just trims back the existing mesh along a specified edge but is destructive and requires the artist to then create a separate bevel after the fact. <strong>3dsMax</strong> and <strong>Maya</strong> have 3rd party tools that try to address the area but lack both reliability and performance as well as being non native.</p>
+                
+                <p>In short, it's still an unsolved problem space.</p>
+
                 <div class="project-gallery">
                     <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 07.png.jpg" alt="Competitive alternatives">
+                        <img src="../assets/Smart Bevel 06.png" alt="Modo Mesh Fusion example">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>The above image was produced with Modo's Mesh Fusion workflow. It's an example of a tool that produces desirable results but has some real limitations due to the mesh having to be built in a very specific way.</em></p>
                     </div>
                 </div>
 
-                <h3>Why These Options Aren't Widely Used</h3>
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 07.png.jpg" alt="Smooth Boolean example">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>Smooth Boolean, a 3rd party plugin for 3dsMax is capable of creating the desired end result but suffers from several drawbacks. It is non-interactive and the quality of the results vary. It can be fiddly to use and it's not native.</em></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>So, if there are options out there, why are they not widely used? There are several reasons these tools are not commonly adopted.</h3>
                 <ul>
-                    <li>They only do part of the ask</li>
-                    <li>Not interactive</li>
-                    <li>Fiddly Setup</li>
-                    <li>Reliability varies</li>
-                    <li>Not Native</li>
+                    <li>Modelers have gotten used to the limitations and either design around these types of forms or create these features explicitly. While both approaches can work they offer little flexibility if changes need to be made.</li>
+                    <li>Some of the tools only do part of the task. They can either trim existing geometry but not add the bevel portion or make a mess of the geometry requiring post cleanup.</li>
+                    <li>Two of the tools require a multi step process and thus are not interactive.</li>
+                    <li>Sometimes the tools require an additional processing step and can take seconds to minutes to compute the results.</li>
+                    <li>Almost all of the tools can rail or generate problematic geometry meaning that some forms are not achievable or require cleanup.</li>
+                    <li>Lastly the majority of the tools are not native limiting their accessibility to all users.</li>
                 </ul>
                 
                 <div class="project-gallery">
                     <div class="project-gallery__item">
                         <img src="../assets/Smart Bevel 08.png.jpg" alt="Limitations of existing tools">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>This model in this image is representative of the kinds of forms the functionality is designed to produce. Note the smooth blended transitions between the various forms and small rounded edges on the panels.</em></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 4rem;"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Initial customer concept validation</h2>
+            <div class="project-section__content">
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"much needed"</p>
+                    <hr>
+                </div>
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"Can we have something like this implemented in 3ds max? It's just perfect for modeling and to quickly create nice shapes with chamfers."</p>
+                    <hr>
+                </div>
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"That looks very similar to meshfusion in Modo! I would love to see this functionality in 3dsMax. 3dsMax 2017 came a bit closer with the new boolean tools, but the fillets/chamfer functionality is still missing!"</p>
+                    <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>The Work</h2>
+            <div class="project-section__content">
+                <p>So how could we do better than what's currently available? To truly raise the bar, we focused on a few core principles that would set the tool apart and make it best in class:</p>
+                
+                <ul>
+                    <li><strong>Make it native.</strong> By building the tool directly into both 3ds Max and Maya, we eliminated the need for third-party plugins—reducing friction and ensuring broader adoption across teams.</li>
+                    
+                    <li><strong>Build on a shared foundation.</strong> Leveraging a portable geometry format meant we could reuse core logic across both applications. This avoided redundant work and kept behaviors consistent between platforms.</li>
+                    
+                    <li><strong>Prioritize interactivity.</strong> Real-time feedback was non-negotiable. Even with complex calculations under the hood, the tool needed to feel responsive—so modelers could explore results fluidly and stay in creative flow.</li>
+                    
+                    <li><strong>Focus on reliability.</strong> Above all else, the tool had to be rock solid. Stability would be a major differentiator compared to existing solutions and was treated as a top priority from day one.</li>
+                    
+                    <li><strong>Deliver a unified experience.</strong> Historically, 3ds Max and Maya had similar bevel tools—but with different parameter names, UI, and behaviors. This was our chance to deliver a consistent UX across both platforms, simultaneously.</li>
+                    
+                    <li><strong>Define a focused MVP.</strong> Bevels can be deceptively deep—there's a long list of possible features and options. We worked closely with users to identify what was essential for version one, ensuring we hit our release window without compromising on quality.</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Design process</h3>
+                <ul>
+                    <li>In identifying that we wanted Smart Bevel to be a replacement for the legacy features for both the Maya Bevel Tool and 3dsMax's Chamfer Modifier, the first step was to analyze the existing tools and assess both how they work and the similarities and differences.</li>
+                </ul>
+
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 10.png" alt="Legacy tool UIs">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>Here are the UIs for the two legacy tools that would be replaced by Maya's Bevel node and 3dsMax's Chamfer modifier.</em></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Reconciling Functionality and Language</h3>
+                <ul>
+                    <li>While the existing bevel tools in 3ds Max and Maya could produce adequate results, they weren't created equal. The 3ds Max modifier provided more granular control, while Maya's Bevel node was simpler but less flexible. Through conversations with modelers from both camps, we found that much of the existing functionality wasn't widely used—or was only relevant in rare edge cases.</li>
+                    
+                    <li>This opened the door for simplification. We distilled the tool down to the most impactful, commonly used features—striking a balance between power and usability. At the same time, we identified areas where the tools needed to behave differently to align with platform-specific expectations. The result: a streamlined, modern bevel experience that feels familiar and intuitive in both environments—without forcing them to work exactly the same.</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 11.png" alt="Implementation details">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>This is an early side by side exploration of the proposed common interface. This was then used for initial user validation. Though the appearance is different between 3dsMax's command panel and Maya's Attribute editor the parameterization and layout is nearly identical at this stage.</em></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Wash and repeat</h3>
+                <ul>
+                    <li>Post initial UX feedback from modelers on the proposed approach it was important to make the necessary revisions and move to a working prototype.</li>
+                    
+                    <li>Additional input from engineering and product led to modification of necessary differentiations in approach for edge selection and smoothing of normals across bevel boundaries.</li>
+                    
+                    <li>Testable alpha prototypes offer valuable feedback both where the reliability and functionality stands but also if the UX is understandable, expressive and performative.</li>
+                    
+                    <li>Additionally the WIP could be presented to stakeholders to further conversions about engineering challenges, timelines and potential changes to functionality.</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <h3>Current Development</h3>
+                <ul>
+                    <li>As of spring 2025 development is still in progress as a result of engineering challenges related to reliable bevel surface smoothness.</li>
+                    
+                    <li>Beta testing and feedback continues.</li>
+                    
+                    <li>Performance, feature set, and UX has been well received.</li>
+                    
+                    <li>Addition areas of feature expansion have been surfaced for future development</li>
+                </ul>
+
+                <div style="margin-bottom: 2rem;"></div>
+
+                <div class="project-gallery">
+                    <div class="project-gallery__item">
+                        <img src="../assets/Smart Bevel 12.png" alt="Future development">
+                        <p class="project-gallery__caption" style="font-size: 0.9rem;"><em>The above image created by one of our lighthouse customers Fausto Demartini is indicative of the results that can be accomplished using Smart Bevel and we anticipate the results will continue to improve with further development.</em></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="project-section">
-            <h2>The Solution</h2>
+            <h2>Challenges, Learnings, and Early Signals</h2>
             <div class="project-section__content">
-                <h3>How Can We Do Better?</h3>
-                <ul>
-                    <li>Built in</li>
-                    <li>Works with our existing tech</li>
-                    <li>Better interactivity</li>
-                    <li>Fewer limitations</li>
-                    <li>More reliable</li>
-                    <li>Consistent experience across DCCs</li>
-                </ul>
-                
-                <div class="project-gallery">
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 09.png.gif" alt="Solution demonstration">
-                    </div>
+                <p>Tackling bevels at this level of sophistication turned out to be an incredibly complex engineering challenge. A significant portion of our time was spent ensuring not just correctness, but reliability—handling the countless edge cases that arise from complex input meshes, n-gons, and tricky junctions. It was hard, detailed work—but necessary to build something artists could truly trust.</p>
+
+                <p>The payoff is already visible. Modelers can now apply bevels without worrying about topology prep or cleanup—and achieve forms that previously required time-consuming manual work. That shift alone is a huge win for creativity and efficiency.</p>
+
+                <p>Of course, the final measure of success will come from customer sentiment, press, and usage data over time. But already, early beta feedback points in the right direction. Artists are excited, and the promise of this new functionality is clear.</p>
+
+                <p>Here's what we're hearing so far:</p>
+
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"I love where this is going :)"</p>
+                    <p class="quote-author">Andres Felipe Hernandez (Beta Testers)</p>
+                    <hr>
                 </div>
 
-                <h3>What We Need to Build</h3>
-                <ul>
-                    <li>Consistently reliable results even with complex edges</li>
-                    <li>Quick application, modification, and interactive evaluation</li>
-                    <li>A replacement for Bevel/Chamfer</li>
-                    <li>Convergence on Nomenclature and UX</li>
-                </ul>
-                
-                <div class="project-gallery">
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 10.png" alt="Development roadmap">
-                    </div>
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"This is a really cool new feature. Nothing to complain about yet :D."</p>
+                    <p class="quote-author">Paul Erdtmann (Beta Testers, CPL, ScC)</p>
+                    <hr>
                 </div>
 
-                <h3>Implementation Details</h3>
-                <p>CutBack tech should replace the existing features for both Maya and Max:</p>
-                <ul>
-                    <li>Maya Bevel Tool</li>
-                    <li>Max Chamfer Modifier</li>
-                </ul>
-                
-                <div class="project-gallery">
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 11.png" alt="Implementation details">
-                    </div>
+                <div class="customer-quote">
+                    <hr>
+                    <p class="quote-text">"I'm very excited for this. Modo is the only other poly modeling DCC with something like this as native that I know of. I also don't know of any plugin for Blender that can do this dynamically. So it seems a tough nut to crack and officially support. I think this will be a huge win for Max and Maya in the modeling community if it's done well."</p>
+                    <p class="quote-author">Evan Gill (Beta Testers)</p>
+                    <hr>
                 </div>
+            </div>
+        </section>
 
-                <h3>Future Development</h3>
+        <section class="project-section">
+            <h2>Looking Towards the Future</h2>
+            <div class="project-section__content">
                 <ul>
-                    <li>Direct chamfers/bevels along Boolean intersection curves</li>
-                    <li>Variable width radius</li>
-                    <li>Custom curve-based profiles</li>
-                    <li>Other applications: bridge, inset, beveled text</li>
+                    <li>Customers have already weighed in on potential improvements and expansions to the tool.</li>
+                    <li>Users want to directly add chamfers/bevels along the intersection curve of a Boolean Operation thus a potential integration with the new Boolean modifier</li>
+                    <li>Variable width radius along edges</li>
+                    <li>Custom curve-based profiles vs the found in the controls of the legacy tools</li>
+                    <li>Application of the tech to other modeling tools to increase proceduralism and functionality: bridge, inset, Beveled text.</li>
                 </ul>
-                
-                <div class="project-gallery">
-                    <div class="project-gallery__item">
-                        <img src="../assets/Smart Bevel 12.png" alt="Future development">
-                    </div>
-                </div>
             </div>
         </section>
     </main>
